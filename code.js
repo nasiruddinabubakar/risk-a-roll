@@ -20,37 +20,39 @@ document.querySelector(".btn--roll").addEventListener("click", function () {
     case 1:
       document.querySelector(".dice").src = "dice-1.png";
       player1_score = 0;
-
-      if (!check) check = true;
+    console.log("haha");
+      if (!check) 
+      check = true;
       else check = false;
       break;
     case 2:
       document.querySelector(".dice").src = "dice-2.png";
-      if (!check) player1_score++;
-      else player2_score++;
+      if (!check) player1_score+=2;
+      else player2_score+=2;
       break;
     case 3:
       document.querySelector(".dice").src = "dice-3.png";
-      if (!check) player1_score++;
-      else player2_score++;
+      if (!check) player1_score+=3;
+      else player2_score+=3;
       break;
     case 4:
       document.querySelector(".dice").src = "dice-4.png";
-      if (!check) player1_score++;
-      else player2_score++;
+      if (!check) player1_score+=4;
+      else player2_score+=4;
       break;
     case 5:
       document.querySelector(".dice").src = "dice-5.png";
-      if (!check) player1_score++;
-      else player2_score++;
+      if (!check) player1_score+=5;
+      else player2_score+=5;
       break;
     case 6:
       document.querySelector(".dice").src = "dice-6.png";
-      if (!check) player1_score++;
-      else player2_score++;
+      if (!check) player1_score+=6;
+      else player2_score+=6;
       break;
   }
-  document.querySelector(".current-score").textContent = player1_score;
+ document.getElementById('current--0').textContent = player1_score;
+  document.getElementById('current--1').textContent = player2_score;
   if (check) {
     players_ui.classList.remove("player--active");
     player2.classList.add("player--active");
