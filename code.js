@@ -1,5 +1,5 @@
 "use strict";
-
+alert(" Roll the dice, Numbers will add up. Press Hold to save score. if dice result is 1. current score is lost");
 document.querySelector(".btn--new").textContent = "🔃New Game";
 document.querySelector(".btn--hold").textContent = "🗃️Hold";
 document.querySelector(".btn--roll").textContent = "🎲Roll Dice";
@@ -82,23 +82,22 @@ function rollTheDice() {
 
   checkStatus();
 }
- function holdButton() {
+function holdButton() {
   updateScore(check);
   if (!check) check = true;
   else check = false;
   checkStatus();
-};
+}
 
-function newGame(){
-
-    curr = 0;
-        document.getElementById("name--1").textContent = "Player 2";
-        document.getElementById("name--0").textContent = "Player 1";
-        player1_score = 0;
-        player2_score = 0;
-        document.getElementById("current--0").textContent = 0;
-        document.getElementById("current--1").textContent = 0;
-        document.getElementById("score--1").textContent = player2_score;
-        document.getElementById("score--0").textContent = player1_score;
-        player1_activate();
+function newGame() {
+  curr = 0;
+  document.getElementById("name--1").textContent = "Player 2";
+  document.getElementById("name--0").textContent = "Player 1";
+  player1_score = 0;
+  player2_score = 0;
+  document.getElementById("current--0").textContent = 0;
+  document.getElementById("current--1").textContent = 0;
+  document.getElementById("score--1").textContent = player2_score;
+  document.getElementById("score--0").textContent = player1_score;
+  player1_activate();
 }
